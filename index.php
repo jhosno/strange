@@ -130,7 +130,7 @@ error_reporting(E_ALL ^ E_NOTICE);
             <?php echo $_SESSION['usuario']; ?>
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuUser">
-            <a class="dropdown-item" href="#">Perfil</a>
+            <a class="dropdown-item" href="Views/prolife.php">Perfil</a>
             <a class="dropdown-item" href="Controllers/logout.php"><button class="btn btn-warning btn-block">Salir</button></a>
           </div>  
         </div>
@@ -176,7 +176,8 @@ data-target="#loginModal" >
 	<div class="container">
 	<h2>¡Bienvenidos!</h2>
 	<p>Este es un modesto módulo de usuario con bitácora. </p>	
-	</div>
+    
+  </div>
 
 	
 

@@ -21,6 +21,7 @@ $consulta = "SELECT * FROM `users` WHERE user='".$user."' OR email='".$user."'";
 //Obtenemos los resultados
 //$resultado = $connection->$consulta;
 $datos = $connection->query($consulta)->fetch_array();
+$privilegios = $connection->query("SELECT * FROM privileges WHERE user_id=".$datos['id']."")->fetch_assoc();
 
 //Guardamos los resultados del nombre de usuario en minúsculas
 //y de la contraseña de la base de datos
@@ -38,6 +39,10 @@ if($userBD == $user or $datos['email'] == $user and password_verify($password, $
 	$_SESSION['id'] = $datos['id'];
 	$_SESSION['usuario'] = $datos['name'];
 	$_SESSION['estado'] = 'Autenticado';
+	$_SESSION['bitacora'] = $privilegios['edit'];
+	$_SESSION['usuarios'] = $privilegios['records'];
+	$_SESSION['perfil	'] = $privilegios['level_user'];
+	die(print_r($_SESSION));
 	header("Location:../index.php") ;
 	/* Sesión iniciada, si se desea, se puede redireccionar desde el servidor */
 
