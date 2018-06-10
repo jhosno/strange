@@ -1,6 +1,6 @@
 <?php
 //Conectamos a la base de datos
-require('connection.php');
+require('Connection.php');
 
 //Obtenemos los datos del formulario de registro
 $email = $_POST['email'];

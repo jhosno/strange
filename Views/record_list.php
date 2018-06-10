@@ -7,7 +7,7 @@ error_reporting(E_ALL ^ E_NOTICE);
 include('header.php'); 
 include('menu.php'); 
 include('footer.php'); 
-require('../Controllers/connection.php');
+require('../Controllers/Connection.php');
  
     $result = $connection->query("SELECT users.name, records.action, records.create_at, records.id, records.time FROM users JOIN records ON users.id = records.user_id");
 

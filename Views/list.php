@@ -7,7 +7,7 @@ error_reporting(E_ALL ^ E_NOTICE);
 include('header.php'); 
 include('menu.php'); 
 include('footer.php'); 
-require('../Controllers/connection.php');
+require('../Controllers/Connection.php');
 
 $result = $connection->query("SELECT users.email, users.user,users.name, users.id, privileges.privilege FROM users JOIN privileges ON users.id = privileges.user_id");
    // die(var_dump($result));
@@ -107,7 +107,7 @@ $result = $connection->query("SELECT users.email, users.user,users.name, users.i
          <a class="btn btn-small btn-warning"
          data-toggle="modal"
          data-target="#exampleModal"
-         data-whatever="'.$r['id'].' "><i class="fas fa-user-times"></i></a>
+         data-whatever="'.$r['id'].' "><i  class="fas fa-user-times"></i></a>
          <a class="btn btn-small btn-warning"
          data-toggle="modal"
          data-target="#exampleModal"

@@ -7,6 +7,8 @@ $connection = new mysqli($config['host'],$config['username'], $config['password'
 
 if ($connection->connect_error) {
     die("Fallo de conexión: " . $conn->connect_error);
-} 
+}else{
+	return $connection;
+}
 
  ?>

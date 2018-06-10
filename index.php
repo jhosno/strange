@@ -36,7 +36,10 @@ error_reporting(E_ALL ^ E_NOTICE);
             <label for="password">Clave</label>
             <input type="password" class="form-control" id="password" placeholder="********" name="password">
           </div>
-          <a href="#">Recuperar contraseña</a>
+          <a data-toggle="modal"  
+  data-titulo="Registro de usuario"
+  data-target="#recoveryModal" 
+   id="recovery-trigger">Recuperar contraseña</a>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
             <button type="submit" class="btn btn-warning">Entrar</button>
@@ -81,8 +84,38 @@ error_reporting(E_ALL ^ E_NOTICE);
             <label for="password-2">Confirme clave</label>
             <input type="password" class="form-control" id="password-2" placeholder="********">
           </div>
-          <a href="#">Recuperar contraseña</a>
+          <a data-toggle="modal"  
+  data-titulo="Registro de usuario"
+  data-target="#recoveryModal" 
+   id="recovery-trigger">Recuperar contraseña</a>
           <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            <button type="submit" class="btn btn-warning  ">Entrar</button>
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal recovery -->
+<div class="modal fade" id="recoveryModal" tabindex="-1" role="dialog" aria-labelledby="recoveryModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="recoveryModalLabel">Recperación de contraseña</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="form" method="POST" action="Controllers/signup.php">
+
+           <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="name@example.com" name="email">
+          </div>
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
             <button type="submit" class="btn btn-warning	">Entrar</button>
 

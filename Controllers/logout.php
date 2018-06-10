@@ -3,7 +3,7 @@
 session_start();
 
 //Requerimos los datos de la conexión a la BBDD
-require('connection.php');
+require('Connection.php');
 	
 	$action = "El usuario ha cerrado sesión";
 	$record = "INSERT INTO `records`(`user_id`, `action`, `create_at`, `time`) VALUES (".$_SESSION['id'].", '".$action."',CURRENT_DATE,CURRENT_TIME)";
